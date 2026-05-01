@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>步入静默 / Walking into Silence</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101113;
+      --panel: #191b1f;
+      --line: #343841;
+      --text: #ece7dc;
+      --muted: #a8a091;
+      --accent: #c6a15b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 50% 0%, #28251f 0%, var(--bg) 54%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    #app {
+      width: min(620px, 100%);
+      border: 1px solid var(--line);
+      background: rgba(25, 27, 31, 0.9);
+      padding: clamp(22px, 5vw, 42px);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 8vw, 4.5rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .status {
+      min-height: 56px;
+      border: 1px solid var(--line);
+      padding: 14px;
+      margin: 22px 0;
+      display: flex;
+      align-items: center;
+      color: var(--text);
+      background: #131519;
+    }
+    button {
+      min-height: 48px;
+      width: 100%;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:active {
+      background: rgba(198, 161, 91, 0.18);
+    }
+    a {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="app" aria-label="Walking into Silence public entry">
+      <h1>步入静默</h1>
+      <p>一个关于逆向成长、失去与沉默的神学互动小说原型。当前页面是 GitHub Pages 公开入口，用于避免试玩链接返回 404。</p>
+      <div id="status" class="status">旅程尚未开始。点击下方入口，确认页面脚本与触摸入口可用。</div>
+      <button id="begin" type="button">步入静默</button>
+      <p>本地运行：<code>python3 -m http.server 8000</code>。完整玩法按 legacy takeover plan 后续推进。</p>
+      <p><a href="https://github.com/dengxiaocheng/TheologyGame-WalkingSilence">查看仓库</a></p>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
